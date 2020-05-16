@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{heading}}
+{% endblock title %}
+
+
+{% block contents %}
+<br>
+<h2>SOSMED USER TABLES</h2>
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nama Depan</th>
+        <th scope="col">Nama Belakang</th>
+        <th scope="col">Username</th>
+        <th scope="col">Hapus</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        
+        {% for akun in semua_akun %}
+                        
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{akun.nama_depan}}</td>
+                <td>{{akun.nama_belakang}}</td>
+                <td>{{akun.username}}</td>
+                <td><a class="btn btn-danger" href="{% url 'sosmed:delete' akun.id %}">delete</a></td>
+            </tr>
+
+        {% endfor %}
+    </tbody>
+
+  </table>
+  <a class="btn btn-primary" href="{% url 'sosmed:create' %}">Create User</a>      
+
+{% endblock contents %}
+    

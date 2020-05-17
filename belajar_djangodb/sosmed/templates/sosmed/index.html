@@ -16,7 +16,8 @@
         <th scope="col">Nama Depan</th>
         <th scope="col">Nama Belakang</th>
         <th scope="col">Username</th>
-        <th scope="col">Hapus</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
 
@@ -29,7 +30,8 @@
                 <td>{{akun.nama_depan}}</td>
                 <td>{{akun.nama_belakang}}</td>
                 <td>{{akun.username}}</td>
-                <td><a class="btn btn-danger" href="{% url 'sosmed:delete' akun.id %}">delete</a></td>
+                <td><a class="btn btn-warning" href="{% url 'sosmed:update' akun.id %}">Edit</a></td>
+                <td><a class="btn btn-danger" href="{% url 'sosmed:delete' akun.id %}">Hapus</a></td>
             </tr>
 
         {% endfor %}

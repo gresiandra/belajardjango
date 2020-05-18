@@ -10,6 +10,12 @@
         {% csrf_token %}
         <button type="submit">POST</button>
     </form>
+
+    <ul>
+        <li><a href="{% url 'classBased:index' %} ">Index</a></li>
+        <li><a href="{% url 'classBased:index1' %} ">Index1</a></li>
+        <li><a href="{% url 'classBased:index2' %} ">Index2</a></li>
+    </ul>
 {% endblock contents %}
     
     

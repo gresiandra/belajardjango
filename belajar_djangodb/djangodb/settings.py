@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'contact',
     'sosmed',
+    'classBased',
 ]
 
 MIDDLEWARE = [
